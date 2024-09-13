@@ -8,7 +8,8 @@ public class GenericWorker {
 
     public static Integer bigIntegerSize(String input) {
         CustomList<BigInteger, Integer> list = new CustomList<>(20);
-        return list.count(BigInteger.ONE);
+        //return list.count(BigInteger.ONE);
+        return list.count(BigInteger.valueOf(20));
     }
 
     public static String doPrint() {

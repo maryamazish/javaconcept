@@ -65,14 +65,14 @@ public class StreamWorkerTest {
 
     @Test
     void findByCode_Success(@Mock Employee employee) {
-        String code = "006";
-        //String code = "005";
-        when(employee.code()).thenReturn(code);
-        when(employee.isActive()).thenReturn(true);
+        //String code = "006";
+        //when(employee.code()).thenReturn(code);
+        //when(employee.isActive()).thenReturn(true);
+        String code = "005";
         var result = this.streamWorker.findByCode(code);
         assertTrue(result.isPresent());
-        //assertEquals(employees.get(4), result.get());
-        assertEquals(employee, result.get());
+        assertEquals(employees.get(4), result.get());
+        //assertEquals(employee, result.get());
     }
 
     @Test
